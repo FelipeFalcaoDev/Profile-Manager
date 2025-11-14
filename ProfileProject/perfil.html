@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gerenciador de Perfis</title>
+    <!-- Já esse aqui é o link do script do tailwind que é o framework de estilo que usaremos -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+
+  <!-- Body/Plano de fundo -->
+  <body class="bg-gray-900 text-gray-100 font-sans">
+    <!-- Container que guarda o outro container -->
+    <div class="min-h-screen flex items-center justify-center px-4">
+      <!-- Container simples apenas para pegar o campo de inputs e os dois selects -->
+      <div
+        class="bg-gray-800 p-8 rounded-xl shadow-lg w-full max-w-sm flex flex-col gap-6"
+      >
+        <!-- Título -->
+        <h1 id="title" class="text-2xl font-bold text-center text-indigo-400">
+          Informações do Perfil
+        </h1>
+
+        <!-- Input Nome-->
+        <input
+          type="text"
+          id="nameInput"
+          placeholder="Insira seu nome"
+          class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
+        />
+
+        <!-- Input Idade -->
+        <input
+          type="number"
+          id="ageInput"
+          placeholder="Insira sua idade"
+          class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
+        />
+
+        <!-- Input Email -->
+        <input
+          type="email"
+          id="emailInput"
+          placeholder="Insira seu email"
+          class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+          required
+        />
+
+        <!-- O tema escuro vai ser o padrão por isso vai vir com ele selecionado inicialmente -->
+        <select
+          id="themeSelect"
+          name="select"
+          class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          <option id="option-1" value="nightTheme" selected>Tema Escuro</option>
+          <option id="option-2" value="lightTheme">Tema Claro</option>
+        </select>
+
+        <!-- Fonte Sans vai ser o padrão por isso vai vir com ela selecionada inicialmente -->
+        <select
+          id="fontColorSelect"
+          name="select"
+          class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        >
+          <option id="option-3" value="lightFont" selected>Fonte clara</option>
+          <option id="option-4" value="darkFont">Fonte escura</option>
+        </select>
+
+        <!-- Foto do usuário -->
+        <img
+          id="userPhoto"
+          src="pictures/img1.png"
+          class="w-32 h-32 object-cover rounded-full mx-auto border border-gray-700"
+        />
+
+        <!-- Campo para indicar o nome do arquivo da foto -->
+        <input
+          type="text"
+          id="photoInput"
+          placeholder="Nome da foto (ex: img1.png)"
+          class="w-full px-4 py-3 rounded-lg bg-gray-900 border border-gray-700 text-gray-200 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
+        />
+      </div>
+
+      <!-- Botão de sair/logoff -->
+      <button
+        id="logoutBtn"
+        class="fixed top-4 right-4 bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-4 rounded-lg shadow transition"
+      >
+        Sair
+      </button>
+    </div>
+
+    <!-- Aqui ele carrega o arquivo de script para as funções, e outras funcionalidades que serão usadas -->
+    <script src="script.js"></script>
+  </body>
+</html>
